@@ -1,0 +1,6 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:co-log-fused-effects"
+    - path: "./test"
+      component: "test:co-log-fused-effects-test"

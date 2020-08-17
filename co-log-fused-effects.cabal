@@ -22,7 +22,9 @@ source-repository head
 
 common common-options
   build-depends:       base ^>= 4.13.0.0
-  
+                     , fused-effects
+                     , transformers
+
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
@@ -42,8 +44,11 @@ common common-options
 
 library
   import:              common-options
+  build-depends:       co-log-core
   hs-source-dirs:      src
-  exposed-modules:     CoLogFusedEffects
+  exposed-modules:     Control.Effect.Colog
+                       Control.Carrier.Colog
+                       Control.Carrier.Colog.Trace
 
 executable co-log-fused-effects
   import:              common-options
